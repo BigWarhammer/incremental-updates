@@ -1,0 +1,266 @@
+#不参与分包（通常会在app级配置 或者使用热更）
+unused:
+  - achievement/
+  - activities/
+  - items/
+  - hotfix/
+  - lottery/
+  - shortcut/
+  - award/
+  - signin/
+  - hallConfig/
+  - default/
+  - kms/
+  - config/addin/
+  - config/database/
+  - config/extra/
+  - config/AristocratCfg.lua
+  - config/HallCfg.lua
+  - config/popup.json
+  - config/hotupdate.manifest
+  - config/project.manifest
+  - config/project_contents.manifest
+  - config/project_contents_v2.manifest
+  - config/StaticCfg.ini
+
+#执行规则(按顺序执行)
+rules:
+  - config
+  - loading
+  - recharge
+  - guide
+  - hall-animations
+  - hall-major
+  - hall-minor
+  - pet
+  - roles
+  - setting
+  - userinfo
+  - plaza-team
+  - game-share
+  - game-share-frame
+  - game-share-theme
+  - addin
+  - contacts
+  - gamebox
+  - plugin
+  - external
+  - external-edge #边缘扩展功能
+  - base
+  - common
+  - sound
+  - rules
+  - other
+  - csb-ex
+  - gameplazalua
+  - plist
+
+rule-config:
+  container:
+    - config/
+
+rule-common:
+  container:
+    - animation/particle/ #金币特效
+    - animation/spine/buyBtn/ #按钮动画
+    - animation/spine/commonRwd/ #恭喜获得
+    - animation/spine/huobi/ #货币动画
+    - animation/spine/screenTouch/ #货币动画
+    - animation/waiting/
+    - animation/
+    - images/Common/
+    - images/Common3/
+    - images/Dialog/
+    - images/ReceiveRewards/
+    - ui/common/
+    - ui/ui_3/commonRwd/
+
+rule-base: #基础功能
+  container:
+    - images/Face/
+    - images/Misc3/
+    - images/NetworkLag/
+    - ui/close_layer.csb
+    - ui/loading_layer.csb
+    - ui/login_ui.csb
+    - ui/recharge_pay_ui.csb
+    - ui/recharge_pay_web_ui.csb
+    - ui/web_ui.csb
+    - ui/update/
+    - ui/ui_3/notice/
+
+rule-loading:
+  container:
+    - animation/plist_csi/ #loading
+    - animation/spine/loading/
+    - animation/spine/loadingBar/
+    - images/AppNotice/
+    - images/Loading/
+    - images/Login3/
+    - images/Update/
+    - images/UserAgreement/
+    - ui/ui_3/account/
+    - ui/ui_3/account_list_layer.csb
+    - ui/ui_3/addressee_info_layer.csb
+
+rule-recharge: #商场/充值/支付等
+  container:
+    - animation/spine/character/ #商城展示人物
+    - animation/spine/nanren/ #转运礼包人物
+    - animation/spine/rechargeBox/ #转运礼包人物
+    - animation/spine/shop/
+    - animation/spine/shu/ #GameLimitRecharge
+    - recharge/
+    - images/GameLimitRecharge/
+    - images/PreRecharge/
+    - images/Recharge3/
+    - images/RechargeFull3/
+    - images/RechargeLimit/
+    - ui/ui_3/recharge/
+    - ui/ui_3/rechargeLimit/
+
+rule-guide: #新手
+  container:
+    - animation/spine/firstLogin/ #注册送宝箱
+    - images/NoviceBoot/
+    - images/Guide/
+    - images/itemsGuide/
+    - ui/ui_3/guide/
+    - ui/ui_3/guideRecharge/
+
+rule-hall-animations:
+  container:
+    - animation/spine/hallBg/
+    - animation/spine/hallBtnAni/
+
+rule-hall-major: #大厅主界面
+  container:
+    - images/DownloadBar3/
+    - images/Hall3/
+    - ui/ui_3/hall/
+
+rule-hall-minor:
+  container:
+    - animation/spine/room/
+    - animation/spine/transition/
+    - animation/spine/flyBox/ #飞行宝箱
+    - images/GameStage/
+    - images/Match3/
+    - images/ReliefFund/
+    - images/Room3/
+    - ui/ui_3/room/
+
+rule-pet: #宠物
+  container:
+    - animation/spine/pet/
+    - images/Pet/
+    - ui/ui_3/pet/
+
+rule-roles: #人物
+  container:
+    - animation/spine/roles/
+    - images/roles/
+    - ui/ui_3/role/
+
+rule-setting:
+  container:
+    - images/Setting3/
+    - ui/ui_3/setting/
+
+rule-userinfo:
+  container:
+    - images/Bank3/
+    - images/Package3/
+    - images/UserInfo3/
+    - images/UserUpgrade3/
+    - ui/ui_3/userinfo/
+
+rule-plaza-team:
+  container:
+    - images/PlazaTeam/
+    - ui/ui_3/plazaTeam/
+
+rule-game-share:
+  container:
+    - gameShare/images/
+    - gameShare/plist/
+    - gameShare/ui/
+
+rule-game-share-frame:
+  container:
+    - gameShare/spine/frame/
+
+rule-game-share-theme:
+  container:
+    - gameShare/spine/theme/
+
+rule-gamebox:
+  container:
+    - images/GameBox3/
+    - images/GameBoxHall3/
+    - images/GameBoxList3/
+
+rule-addin:
+  container:
+    - images/addin/
+    - honoraryTitle/
+
+rule-plugin:
+  container:
+    - plugin/
+    - images/Mail3/
+    - images/PlazaMessage3/
+    - images/Task3/
+    - ui/ui_3/plugin/
+
+rule-contacts:
+  container:
+    - images/Contact3/
+    - images/ContactTeam/
+    - images/newContact/
+    - ui/ui_3/Contact/
+    - ui/ui_3/ContactTeam/
+
+rule-external: #扩展功能
+  container:
+    - images/dailyShare/
+    - images/Exchange/
+    - images/FreeWelfare/
+    - images/PropGuide3/
+    - images/Share/
+    - images/TodayRecord/
+    - images/Advertise/
+
+rule-external-edge: #边缘扩展功能（较低的更新概率）
+  container:
+    - setting/
+    - images/table/
+    - ui/ui_3/table/
+    - images/coupons/
+    - images/Repair/
+
+rule-csb-ex:
+  container:
+    - ui/ui_3/
+
+rule-sound:
+  container:
+    - sound/
+
+rule-rules:
+  container:
+    - rules/
+    - images/rule/
+
+rule-gameplazalua:
+  container:
+    - GamePlaza-lua/
+
+rule-plist:
+  container:
+    - plist/
+
+rule-other:
+  container:
+    - prize/
+    - images/Achivement/
